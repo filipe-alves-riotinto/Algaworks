@@ -31,9 +31,10 @@ function ImageUpload (props: ImageUploadProps) {
             <Button 
                 variant={'primary'} 
                 label={'Remover imagem'}
-                onClick={() => setFilePreview(null)}
+                onClick={() => setFilePreview(null)}                
+            >
                 
-            />
+            </Button>
         </IU.ImagePreview>
     </IU.ImagePreviewWrapper>
 
