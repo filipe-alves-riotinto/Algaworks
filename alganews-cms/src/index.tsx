@@ -4,19 +4,28 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import UserView from './views/User.view';
+import HomeView from './views/Home.view';
+import ContactView from './views/Contact.view';
+import NotFound404View from './views/NotFound404.view';
+import NavBar from './components/NavBar';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Switch>
-        <Route path={'/home'} exact>
-          <App />
-        </Route>
-      </Switch>
-    </BrowserRouter>
+    <div>
+      <BrowserRouter>
+      <NavBar/>
+        <Switch>
+          <Route path={'/'} exact component={HomeView}/>
+          <Route path={'/contato'} exact component={ContactView}/>
+          <Route path={'/usuario/:userId'} component={UserView}/>
+          <Route component={NotFound404View}/>
+        </Switch>
+      </BrowserRouter>
+    </div>
   </React.StrictMode>
 );
 
