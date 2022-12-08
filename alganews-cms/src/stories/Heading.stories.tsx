@@ -1,7 +1,7 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
 
-import Heading, { HeadingProps } from '../components/Typography/Heading';
+import Heading, { HeadingProps } from '../app/components/Typography/Heading';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {

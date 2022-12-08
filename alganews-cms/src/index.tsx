@@ -1,32 +1,28 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import ReactDOM from 'react-dom';
+import './core/imports.css';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
-import UserView from './views/User.view';
-import HomeView from './views/Home.view';
-import ContactView from './views/Contact.view';
-import NotFound404View from './views/NotFound404.view';
-import NavBar from './components/NavBar';
+import UserView from './app/views/User.view';
+import Home from './app/views/Home.view';
+import Contact from './app/views/Contact.view';
+import NotFound404 from './app/views/NotFound404.view';
+import GlobalStyles from './core/globalStyles'
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
-root.render(
+
+ReactDOM.render(
   <React.StrictMode>
-    <div>
       <BrowserRouter>
-      <NavBar/>
         <Switch>
-          <Route path={'/'} exact component={HomeView}/>
-          <Route path={'/contato'} exact component={ContactView}/>
-          <Route path={'/usuario/:userId'} component={UserView}/>
-          <Route component={NotFound404View}/>
+          <Route path={'/'} exact component={Home} />
+          <Route path={'/contato'} exact component={Contact} />
+          <Route path={'/usuario/:userId'} component={UserView} />
+          <Route component={NotFound404} />
         </Switch>
       </BrowserRouter>
-    </div>
-  </React.StrictMode>
+    <GlobalStyles/>
+  </React.StrictMode>,
+  document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
-import TagInput, { TagInputProps } from '../components/TagInput';
+import TagInput, { TagInputProps } from '../app/components/TagInput';
 
 export default {
   title: 'Example/TagInput',
