@@ -4,11 +4,11 @@ import Profile from "../components/Profile";
 
 export default function EditorsListFeature () {
     return <EditorsListWrapper>
-        <Profile name= "Filipe Alves" description="Administrador"/>
-        <Profile name= "Eder Riotinto" description="Editor"/>
-        <Profile name= "Guilherme" description="Editor"/>
-        <Profile name= "Reylan" description="Editor"/>
-        <Profile name= "Matheus" description="Editor"/>
+        <Profile editorId={1} name= "Filipe Alves" description="Administrador"/>
+        <Profile editorId={2} name= "Eder Riotinto" description="Editor"/>
+        <Profile editorId={3} name= "Guilherme" description="Editor"/>
+        <Profile editorId={4} name= "Reylan" description="Editor"/>
+        <Profile editorId={5} name= "Matheus" description="Editor"/>
     </EditorsListWrapper>
 }
 
