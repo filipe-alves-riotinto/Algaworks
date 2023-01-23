@@ -1,9 +1,11 @@
 import { transparentize } from "polished";
+import React from "react";
 import { Component } from "react";
 import ErrorDisplay from "./ErrorDisplay/ErrorDisplay";
 
-
-interface Props {}
+interface Props {
+  
+}
 interface State {
   hasError: boolean;
   error?: {
@@ -11,7 +13,7 @@ interface State {
   }
 }
 
-class ErrorBoundary extends Component<Props, State> {
+class ErrorBoundary extends React.Component<{ children: any }> {
   public state: State = {
     hasError: false
   }

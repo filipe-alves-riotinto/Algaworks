@@ -9,8 +9,6 @@ interface EditorProfileProps{
 }
 
 function EditorProfile (props: EditorProfileProps) {
-    throw new Error("Houve um erro ao rederizar o componente EditorProfile");
-
 
   return <EditorProfileWrapper>
     <EditorHeadline>
